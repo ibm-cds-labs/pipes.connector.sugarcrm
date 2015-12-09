@@ -1,9 +1,9 @@
 {
-  "name": "pipes.connector.sugarcrm65x",
+  "name": "pipes.connector.sugarcrm",
   "version": "0.1.0",
   "description": "SugarCRM connector for Simple Data Pipe tool",
   "main": "./lib",
-  "pipes-connector-name": "sugarcrm65x",
+  "pipes-connector-name": "sugarcrm",
   "keywords": [
     "pipes",
     "dataworks",

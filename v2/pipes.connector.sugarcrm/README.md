@@ -31,7 +31,7 @@ The instructions for setting up the Simple Data Pipe development environment can
 
 The first step is to add a new connector JavaScript file which extends the [connectorExt.js](https://github.com/ibm-cds-labs/pipes/blob/master/server/connectors/connectorExt.js) and uses the [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk).
 
-1. Create a new directory (e.g., _pipes.connector.sugarcrm65x_) for your connector
+1. Create a new directory (e.g., _pipes.connector.sugarcrm_) for your connector
 2. Create a __lib__ directory inside the connector directory created in step 1
 3. Create an `index.js` file inside the __lib__ directory created in step 2
 4. To separate any boilerplate code from `index.js`, you can create a second JavaScript file (e.g., connectorUtil.js) for helper functions
@@ -52,7 +52,7 @@ From a command line prompt:
 
 1. Change to the connector directory:  
 
-	`cd pipes.connector.sugarcrm65x`
+	`cd pipes.connector.sugarcrm`
 	
 2. Create a default `package.json`:
 
@@ -73,11 +73,11 @@ From a command line prompt:
 	
 	```
 	{
-  "name": "pipes.connector.sugarcrm65x",
+  "name": "pipes.connector.sugarcrm",
   "version": "0.1.0",
   "description": "SugarCRM connector for Simple Data Pipe tool",
   "main": "./lib",
-  "pipes-connector-name": "sugarcrm65x",
+  "pipes-connector-name": "sugarcrm",
   "keywords": [
     "pipes",
     "dataworks",
@@ -113,7 +113,7 @@ From a command line prompt:
 	
 2. Link to the connector:
 
-	`npm link [connectorPath]/pipes.connector.sugarcrm65x`
+	`npm link [connectorPath]/pipes.connector.sugarcrm`
 	
 	__[connectorPath]__ is the path to the connector
 	
@@ -168,9 +168,9 @@ module.exports = new sugarConnector();
 var ConnectorUtil = {
 
 	metadata: {
-		id: "sugarcrm65x",
+		id: "sugarcrm",
 		label: "SugarCRM",
-		prefix: "sugar65x"
+		prefix: "sugar"
 	}
 	
 };
@@ -185,7 +185,7 @@ Pipes Tool started on port 8082 : Thu Dec 03 2015 11:06:06 GMT-0500 (EST)
 Loaded connector SalesForce
 Loaded connector stripe
 Cloudant database pipe_db successfully initialized
-Loaded npm dependency connector sugarcrm65x
+Loaded npm dependency connector sugarcrm
 Cloudant database pipe_db successfully initialized
 ```
 ###### Simple Data Pipes' Create A New Pipe dialog:

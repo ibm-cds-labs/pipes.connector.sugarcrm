@@ -8,9 +8,9 @@ var qs = require('querystring');
 var ConnectorUtil = {
 
 	metadata: {
-		id: "sugarcrm65x",		//unique ID for the connector
+		id: "sugarcrm",		//unique ID for the connector
 		label: "SugarCRM",	//connector name that displays in the UI
-		prefix: "sugar65x"		//prefix prepended to each table created from the connector
+		prefix: "sugar"		//prefix prepended to each table created from the connector
 	},
 	
 	//endpoints to be used when negotiate OAuth flow with SugarCRM
