@@ -1,10 +1,9 @@
 
 'use strict';
 
-var pipesSDK = require.main.require('pipes-sdk');
-var connectorExt = pipesSDK.connectorExt;
+var connectorExt = require("../connectorExt");
 var connUtil = require('./connectorUtil.js').ConnectorUtil;
-var pipeDb = pipesSDK.pipesDb;
+var pipeDb = require('../../pipeStorage');
 var _  = require('lodash');
 
 
@@ -51,7 +50,7 @@ function sugarConnector() {
 						req.session.state = JSON.stringify({pipe: pipeId, url: url, oauth_token: oauth_token, oauth_token_secret: oauth_token_secret });
 						
 						//redirect the user to authorize the token
-					   	res.redirect(connUtil.oauthEndPoint(pipe).approveRequestToken + oauth_token);
+					   	res.redirect(connUtil.oauthEndPoint.approveRequestToken + oauth_token);
 					}
 				}
 			);
@@ -158,7 +157,7 @@ function sugarConnector() {
 	
 	
 	/**
-	 * use session_id and fetch records for requested tables (i.e., modules)
+	 * fetch records for requested tables (i.e., modules)
 	 */
 	this.fetchRecords = function(table, pushRecordFn, done, pipeRunStep, pipeRunStats, logger, pipe, pipeRunner) {
 

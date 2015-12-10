@@ -15,7 +15,7 @@ var ConnectorUtil = {
 		prefix: "sugar"		//prefix prepended to each table created from the connector
 	},
 	
-	//endpoints to be used when negotiate OAuth flow with SugarCRM
+	//endpoints to be used when negotiating OAuth flow with SugarCRM
 	oauthEndPoint: {
 		redirect: global.getHostUrl() + "/authCallback",
 		rest: siteUrl + "/service/v4/rest.php",
