@@ -28,7 +28,7 @@ Configure the OAuth credentials for SugarCRM 6.x as follows:
 
 ##### Add the Connector into Simple Data Pipe
 
-Copy the repository into the Simple Data Pipes connectors directory (i.e., _/pipes/server/connectors_).
+Copy the _sugarcrm6x_ directory into the Simple Data Pipes connectors directory (i.e., _/pipes/server/connectors_).
 
 ##### Update the SugarCRM site_url
 
