@@ -2,12 +2,24 @@
 
 ##### [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for SugarCRM
 
-This connector uses the [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk) connector API and makes use of a custom Connect page.
+This repository contains multiple branches which represent different versions of the SugarCRM Simple Data Pipe connector, each of which corresponds with a different version of the Simple Data Pipe connector API:
 
-It is also the connector used as the guide in the [Creating Your Own Simple Data Pipe Connector](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Your-Own-Simple-Data-Pipe-Connector-%28using-the-pipes-sdk-connector-API%29) tutorial and the [Creating Custom Pages for Your Connector](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Custom-Simple-Data-Pipe-Pages) tutorial.
+* [connector-initial](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/tree/connector-initial) branch - uses the initial connector API (i.e., does not use the pipes-sdk)
+* [connector-pipes-sdk](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/tree/connector-pipes-sdk) branch - uses the pipes-sdk connector API
+* [connector-pipes-sdk-custom-page](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/tree/connector-pipes-sdk-custom-page) branch - uses the pipes-sdk and includes a customized page
+
+In addition, tutorials are available for each of these branches (i.e., connector versions):
+
+* [Creating Your Own Simple Data Pipe Connector (using the initial connector API)](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Your-Own-Simple-Data-Pipe-Connector-%28using-the-initial-connector-API%29)
+* [Creating Your Own Simple Data Pipe Connector (using the pipes-sdk connector API)](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Your-Own-Simple-Data-Pipe-Connector-%28using-the-pipes-sdk-connector-API%29)
+* [Creating Custom Simple Data Pipe Pages](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Custom-Simple-Data-Pipe-Pages)
+
+The [master](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm) branch contains the latest version of the SugarCRM connector using the [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk). It should be used with latest version of the Simple Data Pipe implementing the pipes-sdk.
+
+The connector is applicable against SugarCRM servers which support [SugarCRM REST API v4](http://support.sugarcrm.com/Documentation/Sugar_Developer/Sugar_Developer_Guide_7.6/API/Web_Services/API_Versioning/) and OAuth 1.0 (i.e., SugarCRM 6.2.x or greater).
 
 
-### Pre-requisites
+### Prerequisites
 
 ##### Access to SugarCRM
 
@@ -41,8 +53,7 @@ When creating a connector, the custom Connect page contains a __Site url__ field
 
 ### Resources
 
-* [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/)
-* [Simple Data Pipe GitHub repo](https://github.com/ibm-cds-labs/pipes)  
-* [Instructions for setting up a local dev environment for Simple Data Pipe](https://github.com/ibm-cds-labs/pipes/wiki/Instructions-for-setting-up-a-local-dev-environment-for-Simple-Data-Pipe)
-* [Creating Your Own Simple Data Pipe Connector](https://developer.ibm.com/clouddataservices/create-your-own-cloud-etl-connector-easy/)
-* [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk) 
+* [SugarCRM 6.x API Versioning] (http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.5/02_Application_Framework/Web_Services/04_Versioning/)
+* [SugarCRM 6.x OAuth] (http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.5/02_Application_Framework/Authentication/Oauth/)
+* [SugarCRM 6.x REST] (http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.5/02_Application_Framework/Web_Services/01_REST/)
+* [SugarCRM v4 REST API] (http://support.sugarcrm.com/02_Documentation/04_Sugar_Developer/Sugar_Developer_Guide_6.5/02_Application_Framework/Web_Services/05_Method_Calls/)
