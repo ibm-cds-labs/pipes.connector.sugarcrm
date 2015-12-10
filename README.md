@@ -4,7 +4,7 @@
 
 This connector uses the [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk) connector API and makes use of a custom Connect page.
 
-It is also the connector used as the guide in the [Creating Your Own Simple Data Pipe Connector](https://developer.ibm.com/clouddataservices/create-your-own-cloud-etl-connector-easy/) tutorial and the [Creating A Custom Page for Your Connector]() tutorial.
+It is also the connector used as the guide in the [Creating Your Own Simple Data Pipe Connector](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Your-Own-Simple-Data-Pipe-Connector-%28using-the-pipes-sdk-connector-API%29) tutorial and the [Creating Custom Pages for Your Connector](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Custom-Simple-Data-Pipe-Pages) tutorial.
 
 
 ### Pre-requisites
