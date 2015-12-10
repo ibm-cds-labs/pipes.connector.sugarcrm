@@ -20,34 +20,13 @@
 
   <section>
     <h2>
-      Add your OAuth callback to {{selectedConnector.label}}
+      Add your consumer key, consumer secret, and site url
     </h2>
     <p>
-      Copy and paste this callback URL into your {{selectedConnector.label}} app.
+      In the {{selectedConnector.label}} OAuth page, copy your consumer key and secret and paste them here.
+      From the {{selectedConnector.label}} config.php, copy the site_url and paste it here.
+      Then click the connect button.
     </p>
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label class="control-label col-sm-3">Callback URL</label>
-        <div class="col-sm-9">
-          <p class="form-control-static">{{oauthCallback}}</p>
-        </div>
-      </div>
-    </form>
-  </section>
-
-  <section>
-    <h2>
-      Add your consumer key and secret
-    </h2>
-    <p>
-      On the same {{selectedConnector.label}} screen, copy your consumer key and secret and paste them here. Then click the connect button.
-    </p>
-
-    <div class="alert alert-warning" ng-show="selectedConnector.id == 'SalesForce'">
-      <p>
-        <span class="glyphicon glyphicon-warning-sign"></span> If you've just added Simple Data Pipe to {{selectedConnector.label}}, you need to wait ~10 minutes before you can connect.
-      </p>
-    </div>
 
     <form name="pipeConnectionForm" class="form-horizontal" novalidate>
       <div class="form-group" ng-class="{'has-error':!pipeConnectionForm.clientId.$pristine && pipeConnectionForm.clientId.$invalid}">
