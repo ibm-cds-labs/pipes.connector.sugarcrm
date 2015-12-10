@@ -5,8 +5,6 @@ var global = require.main.require('bluemix-helper-config').global;
 var OAuth = require('oauth').OAuth;
 var qs = require('querystring');
 
-var siteUrl = "http://127.0.0.1:80/sugarcrm"; //make sure it matches site_url in SugarCRM's config.php
-
 var ConnectorUtil = {
 
 	metadata: {
@@ -16,11 +14,14 @@ var ConnectorUtil = {
 	},
 	
 	//endpoints to be used when negotiating OAuth flow with SugarCRM
-	oauthEndPoint: {
-		redirect: global.getHostUrl() + "/authCallback",
-		rest: siteUrl + "/service/v4/rest.php",
-		approveRequestToken: siteUrl + "/index.php?module=OAuthTokens&action=authorize&token=",
-		requestAccessToken: siteUrl  + "/service/v4/rest.php?method=oauth_access_token&oauth_verifier="
+
+	oauthEndPoint: function(pipe) {
+		return {
+			redirect: global.getHostUrl() + "/authCallback",
+			rest: pipe.siteUrl + "/service/v4/rest.php",
+			approveRequestToken: pipe.siteUrl + "/index.php?module=OAuthTokens&action=authorize&token=",
+			requestAccessToken: pipe.siteUrl  + "/service/v4/rest.php?method=oauth_access_token&oauth_verifier="
+		}
 	},
 	
 	//client to be used for making OAuth calls and API requests
@@ -32,12 +33,12 @@ var ConnectorUtil = {
 		}
 		
 		return new OAuth(
-			this.oauthEndPoint.rest,
-			this.oauthEndPoint.requestAccessToken + verifier,
+			this.oauthEndPoint(pipe).rest,
+			this.oauthEndPoint(pipe).requestAccessToken + verifier,
 			pipe.clientId,
 			pipe.clientSecret,
 			'1.0A',
-			this.oauthEndPoint.redirect,
+			this.oauthEndPoint(pipe).redirect,
 			'HMAC-SHA1'
 		);
 	},
@@ -62,7 +63,7 @@ var ConnectorUtil = {
 
 // http://{site_url}/service/v4/rest.php?method={method_name}&oauth_token={access_token}&input_type=JSON&response_type=JSON&request_type=JSON&rest_data={api_data}
 var _getMethod = function(method_name, pipe, rest_data_json) {
-	return ConnectorUtil.oauthEndPoint.rest + '?' + qs.stringify({
+	return ConnectorUtil.oauthEndPoint(pipe).rest + '?' + qs.stringify({
 		method: method_name,
 		oauth_token: pipe.oauth.oauth_access_token,
 		input_type: "JSON",

@@ -2,9 +2,9 @@
 
 ##### [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for SugarCRM
 
-This connector is based on and makes use of the [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk) connector API.
+This connector uses the [pipes-sdk](https://github.com/ibm-cds-labs/pipes-sdk) connector API and makes use of a custom Connect page.
 
-It is also the connector used as the guide in the [Creating Your Own Simple Data Pipe Connector](https://developer.ibm.com/clouddataservices/create-your-own-cloud-etl-connector-easy/) tutorial.
+It is also the connector used as the guide in the [Creating Your Own Simple Data Pipe Connector](https://developer.ibm.com/clouddataservices/create-your-own-cloud-etl-connector-easy/) tutorial and the [Creating A Custom Page for Your Connector]() tutorial.
 
 
 ### Pre-requisites
@@ -30,13 +30,13 @@ Configure the OAuth credentials for SugarCRM 6.x as follows:
 
 From within the Simple Data Pipe directory run `npm install [connectorPath]` where __[connectorPath]__ is the path to the _sugarcrm6x_ directory in the SugarCRM connector.
 
-##### Update the SugarCRM site_url
-
-Edit the `connectorUtil.js` and update the `siteUrl` variable to match the `site_url` in SugarCRM's `config.php`.
-
 ##### Launch Simple Data Pipe
 
 Running Simple Data Pipe should now detect and make use of the SugarCRM connector.
+
+##### Custom Connect Page
+
+When creating a connector, the custom Connect page contains a __Site url__ field should be set to the `site_url` from SugarCRM's `config.php`.
 
 
 ### Resources

@@ -51,7 +51,7 @@ function sugarConnector() {
 						req.session.state = JSON.stringify({pipe: pipeId, url: url, oauth_token: oauth_token, oauth_token_secret: oauth_token_secret });
 						
 						//redirect the user to authorize the token
-					   	res.redirect(connUtil.oauthEndPoint.approveRequestToken + oauth_token);
+					   	res.redirect(connUtil.oauthEndPoint(pipe).approveRequestToken + oauth_token);
 					}
 				}
 			);
