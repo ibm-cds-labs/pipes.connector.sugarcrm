@@ -1,9 +1,10 @@
 
 'use strict';
 
-var connectorExt = require("../connectorExt");
+var pipesSDK = require.main.require('pipes-sdk');
+var connectorExt = pipesSDK.connectorExt;
 var connUtil = require('./connectorUtil.js').ConnectorUtil;
-var pipeDb = require('../../pipeStorage');
+var pipeDb = pipesSDK.pipesDb;
 var _  = require('lodash');
 
 

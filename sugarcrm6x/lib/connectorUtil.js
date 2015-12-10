@@ -1,7 +1,7 @@
 
 'use strict';
 
-var global = require('bluemix-helper-config').global;
+var global = require.main.require('bluemix-helper-config').global;
 var OAuth = require('oauth').OAuth;
 var qs = require('querystring');
 
