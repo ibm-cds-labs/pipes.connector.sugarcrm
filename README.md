@@ -31,17 +31,10 @@ Configure the OAuth credentials for SugarCRM 6.x as follows:
 
 ### Using the SugarCRM Connector 
 
-##### Add the Connector into Simple Data Pipe
-
-From within the Simple Data Pipe directory run `npm install [connectorPath]` where __[connectorPath]__ is the path to the _sugarcrm6x_ directory in the SugarCRM connector.
-
-##### Launch Simple Data Pipe
-
-Running Simple Data Pipe should now detect and make use of the SugarCRM connector.
-
-##### Custom Connect Page
-
-When creating a connector, the custom Connect page contains a __Site url__ field should be set to the `site_url` from SugarCRM's `config.php`.
+* [Install the Connector](https://github.com/ibm-cds-labs/pipes/wiki/Installing-a-Simple-Data-Pipe-Connector) into Simple Data Pipe
+* Select __SugarCRM__ for the __Type__ when creating a new pipe
+* In the Connect page, enter the OAuth __Consumer Key__ and __Consumer Secret__
+* In the Connect page, enter the __Site url__ taken from the `site_url` in SugarCRM's `config.php`.
 
 
 ### Resources
