@@ -1,8 +1,12 @@
 {
   "name": "pipes.connector.sugarcrm",
   "version": "0.1.0",
-  "description": "SugarCRM connector for Simple Data Pipe tool",
+  "description": "SugarCRM connector for the Simple Data Pipe tool",
   "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibm-cds-labs/pipes.connector.sugarcrm"
+  },
   "pipes-connector-name": "sugarcrm",
   "keywords": [
     "pipes",
@@ -23,5 +27,6 @@
 	 "when": "~3.7.3"
   },
   "author": "va@us.ibm.com",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "readmeFilename": "../README.md"
 }
