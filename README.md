@@ -25,16 +25,28 @@ Configure the OAuth credentials for SugarCRM 6.x as follows:
 1. Log into SugarCRM
 2. Go into the OAuth page ( __> Admin > OAuth Keys__ )
 3. Click on __Create__
-4. Enter a __Consumer Key Name__, __Consumer Key__, and __Consumer Secret__
+4. Enter a __Consumer Key Name__, __Consumer Key__, and __Consumer Secret__  
+
+	###### SugarCRM OAuth Keys page:
+	![SugarCRM OAuth Keys page] (https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/blob/master/resources/sugarcrmoauthkeys.png)  
+	
 5. Click __Save__
 
 
 ### Using the SugarCRM Connector 
 
 * [Install the Connector](https://github.com/ibm-cds-labs/pipes/wiki/Installing-a-Simple-Data-Pipe-Connector) into Simple Data Pipe
-* Select __SugarCRM__ for the __Type__ when creating a new pipe
+* Select __SugarCRM__ for the __Type__ when creating a new pipe  
+
+	###### Create A New Pipe dialog:
+	![Create A New Pipe dialog] (https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/blob/master/resources/pipescreatenewpipe.png)  
+	
 * In the Connect page, enter the OAuth __Consumer Key__ and __Consumer Secret__
-* In the Connect page, enter the __Site url__ taken from the `site_url` in SugarCRM's `config.php`.
+* In the Connect page, enter the __Site url__ taken from the `site_url` in SugarCRM's `config.php`.  
+
+	###### Pipes Connect page:
+	![Pipes Connect page] (https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/blob/master/resources/pipesconnectpage.png)  
+	
 
 
 ### Resources
