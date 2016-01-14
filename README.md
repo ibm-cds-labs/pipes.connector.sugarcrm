@@ -2,15 +2,8 @@
 
 ##### [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for SugarCRM
 
-This repository contains multiple branches which represent different versions of the SugarCRM Simple Data Pipe connector, each of which corresponds with a different version of the Simple Data Pipe connector API:
+This repository contains the SugarCRM Simple Data Pipe connector and is the connector used for the connector tutorials:
 
-* [connector-initial](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/tree/connector-initial) branch - uses the initial connector API (i.e., does not use the pipes-sdk)
-* [connector-pipes-sdk](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/tree/connector-pipes-sdk) branch - uses the pipes-sdk connector API
-* [connector-pipes-sdk-custom-page](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/tree/connector-pipes-sdk-custom-page) branch - uses the pipes-sdk and includes a customized page
-
-In addition, tutorials are available for each of these branches (i.e., connector versions):
-
-* [Creating Your Own Simple Data Pipe Connector (using the initial connector API)](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Your-Own-Simple-Data-Pipe-Connector-%28using-the-initial-connector-API%29)
 * [Creating Your Own Simple Data Pipe Connector (using the pipes-sdk connector API)](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Your-Own-Simple-Data-Pipe-Connector-%28using-the-pipes-sdk-connector-API%29)
 * [Creating Custom Simple Data Pipe Pages](https://github.com/ibm-cds-labs/pipes.connector.sugarcrm/wiki/Creating-Custom-Simple-Data-Pipe-Pages)
 
