@@ -1,5 +1,7 @@
 # pipes.connector.sugarcrm
 
+:no_entry_sign: This project is no longer maintained.
+
 ##### [Simple Data Pipe](https://developer.ibm.com/clouddataservices/simple-data-pipe/) connector for SugarCRM
 
 This repository contains the SugarCRM Simple Data Pipe connector and is the connector used for the connector tutorials:
